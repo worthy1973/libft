@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:29:14 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/07 15:42:32 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/11 18:02:45 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,16 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 /*
 int main () 
 {
-   const char haystack[20] = "TutorialsPoint";
-   const char needle[10] = "Point";
+   const char haystack[20] = "42LaunchLab";
+   const char needle[10] = "Lab";
    char *ret;
 
    ret = strstr(haystack, needle);
 
-   printf("The substring is: %s\n", ret);
+   printf("La subcadena es: %s\n", ret);
    
    ret = ft_strnstr(haystack, needle, 5);
 
-   printf("The substring is: %s\n", ret);
+   printf("La subcadena es: %s\n", ret);
    return(0);
 }*/
