@@ -6,11 +6,14 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:22:59 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/09/21 12:28:41 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/17 17:58:48 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
+
+//Verifica que el caracter que te pasan es alfanumerico
+//Devuelve no-zero si es letra o numero, si no lo es devuelve 0
 
 int	ft_isalnum(int c)
 

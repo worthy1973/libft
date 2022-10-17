@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:29:39 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/11 19:23:08 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/17 19:11:04 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
+/*
 int main (void) 
 {
    int val;
@@ -82,4 +82,4 @@ int main (void)
    printf("String value = %s, Int value = %d\n", str, val);
 
    return(0);
-}
+}*/

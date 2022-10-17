@@ -6,14 +6,14 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 17:29:40 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/09/23 13:44:55 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/17 18:00:57 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 
 //Tests for any character for which isupper or islower is true.
-//If is true(0), if false(1) 
+//If is true(1), if false(0) 
 
 int	ft_isalpha(int c)
 {

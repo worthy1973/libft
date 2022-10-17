@@ -6,11 +6,14 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:57:56 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/09/23 13:44:11 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/17 18:09:14 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
+
+//Verifica que el caracter es imprimible.
+//Si es verdadero devuelve 1, si es falso devuelve 0
 
 int	ft_isprint(int c)
 {

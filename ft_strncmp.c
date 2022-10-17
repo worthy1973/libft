@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 12:07:16 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/04 12:12:26 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/17 19:12:43 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <string.h>
 #include <stdio.h>
 
+//Compara cadenas apuntadas por el puntero str1 con la cadena apuntada 
+//por str2 con la cantidad n de bytes
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 {

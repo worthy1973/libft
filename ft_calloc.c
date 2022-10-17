@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 15:17:47 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 18:04:52 by dlopez-i         ###   ########.fr       */
+/*   Created: 2022/10/13 11:41:19 by dlopez-i          #+#    #+#             */
+/*   Updated: 2022/10/17 19:14:27 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
+//Reserva suficiente espacio en la memoria para un numero de 
+//objetos que tienen un tamano y devuelve un puntero a ese lugar.
+//La memoria reservada es rellenada por 0
 
-#include <ctype.h>
+void	*ft_calloc(size_t count, size_t size)
 
-//Test for a decimal digital character. (0,1,2,3,4,5,6,7,8,9)
-
-int	ft_isdigit(int c)
 {
-	if ((c >= 48) && (c <= 57))
-		return (1);
-	else
+	size_t	tot_size;
+	void	*dst;
+
+	tot_size = size * count;
+	dst = malloc(tot_size);
+	if (!dst)
 		return (0);
+	ft_memset(dst, 0, tot_size);
+	return (dst);
 }
-/*
-int	main(void)
-{
-	printf("%d\n", isdigit(53));
-	printf("%d\n", ft_isdigit(53));
-
-}
-*/
