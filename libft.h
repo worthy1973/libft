@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:17:06 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 17:19:05 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/18 12:42:06 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,17 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 
 void	*ft_memset(void *str, int c, size_t len);
 
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putendl_fd(char *s, int fd);
+
+void	ft_putnbr_fd(int n, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
+
 char	*ft_strchr(const char *str, int c);
+
+char	*ft_strdup(const char *s1);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
