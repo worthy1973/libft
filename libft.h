@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:17:06 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/18 12:42:06 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:10:17 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char	*ft_strchr(const char *str, int c);
 
 char	*ft_strdup(const char *s1);
 
+char	*ft_strjoin(char const *s1, char const *s2);
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -65,6 +67,10 @@ size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 char	*ft_strrchr(const char *s, int c);
+
+char	*ft_strtrim(char const *s1, char const *set);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 int		ft_tolower(int c);
 
