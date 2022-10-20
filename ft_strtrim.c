@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:30:25 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/19 18:09:46 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:28:47 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	len;
 
 	if (!s1 || !set)
-		return (0);
+		return (NULL);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	len = ft_strlen (s1);
-	while (ft_strchr(set, s1[len] && len))
+	while (ft_strchr(set, s1[len]) && len)
 		len--;
-	return (ft_substr(s1, 0, len = 1));
+	return (ft_substr(s1, 0, len + 1));
 }
