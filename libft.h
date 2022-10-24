@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:17:06 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/20 15:21:07 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/24 20:09:18 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,11 @@ void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putstr_fd(char *s, int fd);
 
+char	**ft_split(char const *s, char c);
+
 char	*ft_strchr(const char *str, int c);
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 char	*ft_strdup(const char *s1);
 
