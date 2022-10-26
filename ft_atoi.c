@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:29:39 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 19:11:04 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/25 17:46:17 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,45 +19,29 @@
 // Esto nos permite hacer operaciones matematicas al pasar 
 // los char a int (EJ)
 
-static int	limit(long long n, const char *s, int sign)
-{
-	long long	limit_min;
-	long long	limit_max;
-
-	limit_min = ((n * 10) + (*s - '0')) * sign;
-	if (limit_min < -2147483648)
-		return (0);
-	limit_max = ((n * 10) + (*s - '0')) * sign;
-	if (limit_max > 2147483647)
-		return (-1);
-	return (1);
-}
-
 int	ft_atoi(const char *str)
 {
-	size_t		i;
-	int			sign;
-	long int	result;
-	int			limit_test;
+	int	i;
+	int	s;
+	int	r;
 
 	i = 0;
-	sign = 1;
-	result = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+	s = 1;
+	r = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	if (str[i] == '+' || str[i] == '-')
-		if (str[i++] == '-')
-			sign *= -1;
-	while (ft_isdigit(str[i]))
+	if (str[i] == '-' || str[i] == '+')
 	{
-		limit_test = limit(result, str, sign);
-		if (limit_test == 0 || limit_test == -1)
-			return (limit_test);
-		result = ((result * 10) + str[i] - '0');
+		if (str[i] == '-')
+			s = -1;
 		i++;
 	}
-	return (result * sign);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		r = (r * 10) + (str[i] - '0');
+			i++;
+	}
+	return (r * s);
 }
 /*
 int main (void) 

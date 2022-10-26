@@ -6,11 +6,12 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:03:28 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/24 20:13:43 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:51:48 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 /* Reserva utilizando un malloc un array de strings 
  * resultante de separar la string 's' en substrings utilizando
@@ -27,7 +28,7 @@ static int	ft_count_words(const char *str, char c)
 	p = 0;
 	while (*str != '\0')
 	{
-		if t(*str != c && p == 0)
+		if (*str != c && p == 0)
 		{
 			sum++;
 			p = 1;
@@ -87,3 +88,18 @@ char	**ft_split(char const *s, char c)
 	new[j] = 0;
 	return (new);
 }
+/*
+int	main(void)
+{
+	char	**new;
+
+	new = ft_split("Hola   Dani   como   estas", ' ');
+	while (*new)
+	{
+	printf("%s \n", *new);
+	new++;
+	}
+	return (0);
+
+}
+*/
