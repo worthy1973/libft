@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:17:06 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/26 17:36:57 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/27 16:36:52 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 
 int		ft_toupper(int c);
+
+//BONUS FT
+
+t_list	*ft_lstnew(void *content);
+
 
 #endif

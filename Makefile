@@ -6,7 +6,7 @@
 #    By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 14:35:26 by dlopez-i          #+#    #+#              #
-#    Updated: 2022/10/26 15:17:02 by dlopez-i         ###   ########.fr        #
+#    Updated: 2022/10/27 17:47:09 by dlopez-i         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,9 @@ INCLUDE = -I.\
 
 OBJS_DIR = objs_deps
 
-AR = ar
+BONUS_OBJS_DIR = objs_deps_bonus
+
+AR = ar -rcs
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -57,30 +59,58 @@ SRCS = ft_atoi.c \
 	   ft_tolower.c \
 	   ft_toupper.c 
 
+BONUS_SCRS = ft_lstnew.c
+
+
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
+BONUS_OBJS = $(addprefix $(BONUS_OBJS_DIR)/, $(BONUS_SCRS:.c=.o))
+
 DEPS = $(addsuffix .d, $(basename $(OBJS)))
+
+BONUS_DEPS = $(addsuffix .d, $(basename $(BONUS_OBJS)))
 
 all: $(NAME)
 
 $(NAME) : $(OBJS) 
-	 $(AR) -rcs $(NAME) $(OBJS)
-	 @echo "All the stuff is created"
+	 $(AR) $(NAME) $(OBJS)
+	 @echo "All the obligatory stuff is created"
 	 @echo "Library created"
 
 -include $(DEPS)
 
+#bonus : $(BNUS)
+#	 touch bonus
+#	 echo BONUS_OBJS: $(BONUS_OBJS)
+#$(BNUS) : $(BONUS_OBJS)
+
+bonus: $(BONUS_OBJS) $(OBJS)
+	 $(AR) $(NAME) $(BONUS_OBJS) $(OBJS)
+	 @echo "All the bonus stuff is created"
+	 @touch bonus
+
+-include $(BONUS_DEPS)
+
 $(OBJS): | $(OBJS_DIR)
+
+$(BONUS_OBJS): | $(BONUS_OBJS_DIR)
 
 $(OBJS_DIR): 
 	@mkdir $@
 	@echo "The directory has been created"
 
-$(OBJS_DIR)/%.o : %.c
+$(OBJS_DIR)/%.o: %.c
 	$(CC) $(CFLAGS) -MMD -MP $(INCLUDE) -c $< -o $@
- 
+
+$(BONUS_OBJS_DIR): 
+	@mkdir $@
+	@echo "The bonus directory has been created"
+
+$(BONUS_OBJS_DIR)/%.o: %.c
+	$(CC) $(CFLAGS) -MMD -MP $(INCLUDE) -c $< -o $@
+
 clean : 
-	@$(RM) $(OBJS_DIR)
+	@$(RM) $(OBJS_DIR) $(BONUS_OBJS_DIR)
 	@echo "objs and deps removed"
 
 fclean : clean
@@ -89,4 +119,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean re 
+.PHONY : all bonus clean fclean re 

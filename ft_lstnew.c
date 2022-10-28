@@ -6,12 +6,18 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:37:19 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/26 17:45:14 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/27 17:32:26 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-t_list	*ft_lstnew(void *content)
+//t_list	*ft_lstnew(void *content)
 
+
+int	main()
+{
+	printf("Hello World");
+}
 
