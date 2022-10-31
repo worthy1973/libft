@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:17:06 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/27 16:36:52 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/10/31 19:26:17 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 
-typedef struct		s_list
+typedef	struct s_list
 {
-void				*content;
-struct s_list		*next;
-} 					t_list;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 
 int		ft_atoi(const char *str);
 
@@ -92,7 +94,8 @@ int		ft_toupper(int c);
 
 //BONUS FT
 
-t_list	*ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
 
+t_list	*ft_lstnew(void *content);
 
 #endif
