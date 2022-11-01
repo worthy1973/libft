@@ -15,17 +15,17 @@
 //Funcion que devuelve el valor de c, convertido a unsigned char, 
 //en cada uno de los primeros n caracteres en el objeto apuntado por s 	
 
-void	*ft_memset(void *str, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < len)
 	{
-		((unsigned char *)str)[i] = c;
+		((unsigned char *)b)[i] = c;
 		i++;
 	}
-	return (str);
+	return (b);
 }
 /*
 int	main(void)

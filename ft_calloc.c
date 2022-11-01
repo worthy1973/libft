@@ -9,8 +9,7 @@
 /*   Updated: 2022/10/17 19:14:27 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
+
 #include "libft.h"
 //Reserva suficiente espacio en la memoria para un numero de 
 //objetos que tienen un tamano y devuelve un puntero a ese lugar.
@@ -19,13 +18,13 @@
 void	*ft_calloc(size_t count, size_t size)
 
 {
-	size_t	tot_size;
-	void	*dst;
+	void	*aux;
+	size_t	asg;
 
-	tot_size = size * count;
-	dst = malloc(tot_size);
-	if (!dst)
+	asg = (count * size);
+	aux = malloc(asg);
+	if (!aux)
 		return (0);
-	ft_memset(dst, 0, tot_size);
-	return (dst);
+	ft_memset(aux, 0, asg);
+	return (aux);
 }
