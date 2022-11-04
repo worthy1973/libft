@@ -6,12 +6,16 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 18:08:12 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/31 18:08:15 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/04 12:00:44 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_lstiter(t_list *lst, void (*f) (void *))
+//Itera la lista ’lst’ y aplica la función ’f’ en el
+//contenido de cada nodo.
 
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)
 	{

@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 18:08:12 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/31 18:08:15 by dlopez-i         ###   ########.fr       */
+/*   Created: 2022/11/04 10:11:32 by dlopez-i          #+#    #+#             */
+/*   Updated: 2022/11/04 10:12:24 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 

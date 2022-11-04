@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:03:28 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/26 11:51:48 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/04 12:53:18 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ int	main(void)
 {
 	char	**new;
 
+	printf("%d \n", ft_count_words( "Hola   Dani   como   estas", ' ')); 
 	new = ft_split("Hola   Dani   como   estas", ' ');
 	while (*new)
 	{
@@ -100,6 +101,4 @@ int	main(void)
 	new++;
 	}
 	return (0);
-
-}
-*/
+}*/

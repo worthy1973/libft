@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:17:06 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/31 19:26:17 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/04 11:56:49 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 
 void	ft_lstclear(t_list **lst, void (*del)(void*));
+
+void	ft_lstdelone(t_list *lst, void (*del) (void*));
 
 void	ft_lstiter(t_list *lst, void (*f) (void *));
 
