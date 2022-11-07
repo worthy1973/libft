@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:37:19 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/31 19:21:06 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/07 11:32:41 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ Aloja con malloc un nuevo elemento
 Protege el error de que no exista new
 La variable content se inicializa con el contenido de content
 La variable next se inicializa con NULL
-Devuelve Next
+Devuelve New
 */

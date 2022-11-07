@@ -15,27 +15,24 @@
 //La funcion copia una len de bytes de una string src a una string dst
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
+	char	*d;
+	char	*s;
 	size_t	i;
 
-	i = 0;
+	d = (char *)dst;
+	s = (char *)src;
+	i = -1;
 	if (!dst && !src)
-		return (0);
-	if ((size_t)dst - (size_t)src < len)
+		return (NULL);
+	if (d < s)
 	{
-		i = len -1;
-		while (i < len)
-		{
-			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-			i--;
-		}
+		while (++i < len)
+			d[i] = s[i];
 	}
 	else
 	{
-		while (i < len)
-		{
-			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-			i++;
-		}
+		while (++i < len)
+			d[len - i - 1] = s[len - i -1];
 	}
 	return (dst);
 }
@@ -45,8 +42,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
    	const char src[]  = "newstring";
 
    printf("Before memmove dest = %s, src = %s\n", dest, src);
-   //memmove(dest, src, 9);
-   ft_memmove(dest, src, 9);
+   memmove(dest, src, 9);
+   //ft_memmove(dest, src, 9);
    printf("After memmove dest = %s, src = %s\n", dest, src);
    return(0);
 }*/
