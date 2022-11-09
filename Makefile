@@ -6,16 +6,26 @@
 #    By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 12:41:30 by dlopez-i          #+#    #+#              #
-#    Updated: 2022/11/07 19:24:13 by dlopez-i         ###   ########.fr        #
+#    Updated: 2022/11/08 15:15:31 by dlopez-i         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+#Variables
 
 NAME = libft.a
-
-BNUS = .bonus
-
+AR = ar -rcs
+CFLAGS = -Wall -Wextra -Werror
+RM = rm -rf
+BONUS = .bonus
 INCLUDE = -I ./
+OBJS_DIR = objs_deps
+BONUS_OBJS_DIR = objs_deps_bonus
+OBJS = $(SRCS:.c=.o)
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+DEPS = $(SRCS:.c=.d)
+DEPS_BONUS = $(SRCS_BONUS:.c=.d)
+
+#Sources
 
 SRCS = ft_atoi.c \
 	   ft_bzero.c \
@@ -62,24 +72,27 @@ SRCS_BONUS = 	ft_lstadd_back.c \
 				ft_lstnew.c \
 				ft_lstsize.c 
 
+#Folders
+
+OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
+OBJS_BONUS = $(addprefix $(BONUS_OBJS_DIR)/, $(SRCS_BONUS:.c=.o))
+DEPS = $(addsuffix .d, $(basename $(OBJS)))
+BONUS_DEPS = $(addsuffix .d, $(basename $(OBJS_BONUS)))
+
 #Colors
+
 END = \033[m
 RED = \033[31m
 GREEN = \033[32m
 YELLOW = \033[33m
-#Font
+
+#Fonts
+
 ligth = \033[1m
-dark = \033[2m
+bold  = \033[2m
 italic = \033[3m
 
-OBJS = $(SRCS:.c=.o)
-OBJS_BONUS = $(SRCS_BONUS:.c=.o)
-
-DEPS = $(SRCS:.c=.d)
-DEPS_BONUS = $(SRCS_BONUS:.c=.d)
-
-AR = ar
-CFLAGS = -Wall -Wextra -Werror
+#Rules
 
 %.o: %.c
 	$(CC) $(CFLAGS) -MMD $(INCLUDE) -c $< -o $@
@@ -87,28 +100,43 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) -rcs $(NAME) $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 	@echo "$(GREEN)$(ligth)All the obligatory stuff is created$(END)"
+	@echo "$(YELLOW)$(ligth)Library created$(END)"
 
 -include $(DEPS)
 
-bonus: $(BNUS)
+bonus: $(BONUS)
 
-$(BNUS): $(OBJS) $(OBJS_BONUS)
-	$(AR) -rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+$(BONUS): $(OBJS) $(OBJS_BONUS)
+	$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
 	touch $@
-	@echo "$(GREEN) $(dark)All the bonus stuff is created$(END)"
+	@echo "$(GREEN)$(ligth)All the bonus stuff is created$(END)"
 
 -include $(DEPS_BONUS)
 
-clean:
-	rm -f $(OBJS) $(OBJS_BONUS) $(DEPS) $(DEPS_BONUS) $(BNUS)
-	@echo "$(YELLOW)$(ligth)Objects and Dependencies removed$(END)"
-
-fclean: clean
-	rm -f $(NAME)
-	@echo "$(RED)$(ligth)Everything is clean$(END)"
-
-re: fclean all
+#
+$(OBJS): | $(OBJS_DIR)
+$(OBJS_BONUS): | $(BONUS_OBJS_DIR)
+$(OBJS_DIR): 
+	@mkdir $@
+	@echo "$(YELLOW)$(ligth)The directory has been created$(END)"
+$(OBJS_DIR)/%.o: %.c
+	$(CC) $(CFLAGS) -MMD -MP $(INCLUDE) -c $< -o $@
+$(BONUS_OBJS_DIR): 
+	@mkdir $@
+	@echo "$(YELLOW)$(light)The bonus directory has been created$(END)"
+$(BONUS_OBJS_DIR)/%.o: %.c
+	$(CC) $(CFLAGS) -MMD -MP $(INCLUDE) -c $< -o $@
 
 .PHONY: all bonus clean fclean re
+#Clean
+
+clean :
+	@$(RM) $(OBJS) $(OBJS_BONUS) $(DEPS) $(DEPS_BONUS) $(BONUS) $(OBJS_DIR) $(BONUS_OBJS_DIR)
+	@echo "$(YELLOW)$(ligth)Objects and Dependencies removed$(END)"
+fclean :
+	@$(RM) $(NAME)
+	@echo "Everything is clean"
+
+re : fclean all
