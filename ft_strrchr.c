@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 10:42:01 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/20 09:19:58 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:12:27 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 	}	
 	return (NULL);
 }
-/*
-int main()
-{
-char s[11] = "Hola amigos"; 
-char c = 'm';
-printf( "s=%s\t", s );
-printf( "c=%c\n", c );
-printf( "strrchr=%s\n", strrchr( s, c ) );
-printf( "strrchr=%s\n", ft_strrchr( s, c ) );
-return 0; 
-}*/

@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 10:49:05 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 18:16:01 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:46:13 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,3 @@ void	*ft_memset(void *str, int c, size_t len)
 	}
 	return (str);
 }
-/*
-int	main(void)
-{
-char str[50];
-
-   strcpy(str,"This is string.h library function");
-   puts(str);
-
-   memset(str,'$',7);
-   puts(str);
-   
-   ft_memset(str,'$',15);
-   puts(str);
-   return(0);
-}
-*/

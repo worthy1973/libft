@@ -6,17 +6,15 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:28:46 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 18:11:41 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:47:06 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 //Compara los primeros n caracteres del string s1 con
 //los primeros n caracteres del string s2. Ambos tratados
-//como unsigned char 
-
-#include "libft.h"
-#include <stdio.h>
-#include <string.h>
+//como unsigned char
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -35,25 +33,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (*string1 - *string2);
 }
-/*
-int main (void) 
-{
-   char str1[15];
-   char str2[15];
-   int ret;
-
-   ft_memcpy(str1, "abcdef", 6);
-   ft_memcpy(str2, "ABCDEF", 6);
-
-   ret = ft_memcmp(str1, str2, 5);
-
-   if(ret > 0) {
-      printf("str2 is less than str1");
-   } else if(ret < 0) {
-      printf("str1 is less than str2");
-   } else {
-      printf("str1 is equal to str2");
-   }
-   
-   return(0);
-}*/

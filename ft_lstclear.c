@@ -6,11 +6,16 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 18:07:46 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/11/04 15:49:44 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:44:30 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//Elimina y libera el nodo 'lst dado y todos los
+//consecutivos de es nodo, utilizando la funcion
+//'del' y free.
+//Al final, el puntero de la lista debe ser NULL
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {

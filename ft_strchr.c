@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:36:10 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/20 09:23:02 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:11:47 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,3 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)str + i);
 	return (NULL);
 }
-/*
-int main()
-{
-	char s[11] = "Hola amigos"; 
-	char c = 'm';
-	printf( "s=%s\t", s );
-	printf( "c=%c\n", c );
-	printf( "strrchr=%s\n", strchr( s, c ) );
-	printf( "strrchr=%s\n", ft_strchr( s, c ) );
-	return 0; 
-}*/

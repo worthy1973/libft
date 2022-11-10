@@ -6,12 +6,13 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:52:59 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/26 15:22:11 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:24:35 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Convierte un integer a una string 
 static char	*ft_array(char *v, unsigned int num, long int len)
 {
 	while (num > 0)

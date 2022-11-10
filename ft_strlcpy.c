@@ -6,12 +6,16 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:25:44 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 19:05:03 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:03:44 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//La funcion copia y concatena cadenas con los mismos
+//parametros de entrada. Copia a dstsize -1 caracteres 
+//de la string src to dst. Si la dstsize no es 0 devuelve
+//NULL 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

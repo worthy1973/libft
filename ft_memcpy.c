@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:24:35 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 18:13:33 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:48:04 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,4 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		i++;
 	}
 	return (dst);
-}	
-/*int main (void) 
-
-{
-   const char src[50] = "Brand New";
-   char dest[50];
-   strcpy(dest,"Old School");
-   printf("Antes de usar memcpy dest = %s\n", dest);
-   ft_memcpy(dest, src, strlen(src)+1);
-   printf("Despues de usar memcpy dest = %s\n", dest);
-   
-   return(0);
-}*/
+}

@@ -6,19 +6,18 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:03:28 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/11/08 15:19:54 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:22:19 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-/* Reserva utilizando un malloc un array de strings 
- * resultante de separar la string 's' en substrings utilizando
- * el caracter 'c' como delimitador. va a devoler una matriz con
- * diferentes strings segun el separador que usemos. En el caso
- * de que no haya memoria debe devolver NUll
-*/
+//Reserva utilizando un malloc un array de strings 
+//resultante de separar la string 's' en substrings utilizando
+//el caracter 'c' como delimitador. va a devoler una matriz con
+//diferentes strings segun el separador que usemos. En el caso
+//de que no haya memoria debe devolver NUll
+
 static int	ft_count_words(const char *str, char c)
 {
 	int	sum;
@@ -88,17 +87,3 @@ char	**ft_split(char const *s, char c)
 	new[j] = 0;
 	return (new);
 }
-/*
-int	main(void)
-{
-	char	**new;
-
-	printf("%d \n", ft_count_words( "Hola   Dani   como   estas", ' ')); 
-	new = ft_split("Hola   Dani   como   estas", ' ');
-	while (*new)
-	{
-	printf("%s \n", *new);
-	new++;
-	}
-	return (0);
-}*/
