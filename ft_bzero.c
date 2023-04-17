@@ -6,13 +6,13 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:23:56 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 19:03:52 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:46:49 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//Pone a zero n bytes de la cadena s.
+//Pone a zero n bytes de la cadena s
 
 void	ft_bzero(void *s, size_t n)
 {

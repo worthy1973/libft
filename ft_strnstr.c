@@ -6,13 +6,11 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:29:14 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/18 16:11:00 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:16:35 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 //Funcion del tipo encuentra una substring en una string
 //Encuentra la primera ocurrencia de la cadena needle en la 
@@ -38,19 +36,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-/*
-int main () 
-{
-   const char haystack[20] = "42LaunchLab";
-   const char needle[10] = "Lab";
-   char *ret;
-
-   ret = strnstr(haystack, needle, 20);
-
-   printf("La subcadena es: %s\n", ret);
-   
-   ret = ft_strnstr(haystack, needle, 20);
-
-   printf("La subcadena es: %s\n", ret);
-   return(0);
-}*/

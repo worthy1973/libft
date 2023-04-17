@@ -6,14 +6,11 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:29:39 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/25 17:46:17 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:17:30 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 // Convierte una cadena de caracteres a un numero entero.
 // Esto nos permite hacer operaciones matematicas al pasar 
@@ -43,27 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return (r * s);
 }
-/*
-int main (void) 
-{
-   int val;
-   char str[20];
-
-   strcpy(str, " -98993489");
-   val = atoi(str);
-   printf("String value = %s, Int value = %d\n", str, val);
-
-   strcpy(str, "tutorialspoint.com");
-   val = atoi(str);
-   printf("String value = %s, Int value = %d\n", str, val);
-
-   strcpy(str, " -98993489");
-   val = ft_atoi(str);
-   printf("String value = %s, Int value = %d\n", str, val);
-
-   strcpy(str, "tutorialspoint.com");
-   val = ft_atoi(str);
-   printf("String value = %s, Int value = %d\n", str, val);
-
-   return(0);
-}*/

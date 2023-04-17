@@ -6,11 +6,11 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:17:47 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 18:04:52 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:40:30 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
 
 //Test for a decimal digital character. (0,1,2,3,4,5,6,7,8,9)
 
@@ -21,11 +21,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-/*
-int	main(void)
-{
-	printf("%d\n", isdigit(53));
-	printf("%d\n", ft_isdigit(53));
-
-}
-*/

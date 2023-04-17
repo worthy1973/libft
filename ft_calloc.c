@@ -6,12 +6,12 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:41:19 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/11/07 16:04:34 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:18:23 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
+
 #include "libft.h"
+
 //Reserva suficiente espacio en la memoria para un numero de 
 //objetos que tienen un tamano y devuelve un puntero a ese lugar.
 //La memoria reservada es rellenada por 0

@@ -6,11 +6,13 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:26:31 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/18 11:41:47 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:37:17 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//Envia el numero n al file descriptor dado
 
 void	ft_putnbr_fd(int nb, int fd)
 {

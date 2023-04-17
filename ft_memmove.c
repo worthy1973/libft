@@ -6,7 +6,7 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:25:05 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 18:14:46 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:54:13 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*int	main(void)
-{
-	char dest[] = "oldstring";
-   	const char src[]  = "newstring";
-
-   printf("Before memmove dest = %s, src = %s\n", dest, src);
-   memmove(dest, src, 9);
-   //ft_memmove(dest, src, 9);
-   printf("After memmove dest = %s, src = %s\n", dest, src);
-   return(0);
-}*/

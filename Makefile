@@ -6,7 +6,7 @@
 #    By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 12:41:30 by dlopez-i          #+#    #+#              #
-#    Updated: 2022/11/08 15:15:31 by dlopez-i         ###   ########.fr        #
+#    Updated: 2022/11/09 10:53:44 by dlopez-i         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -139,4 +139,4 @@ fclean : clean
 	@$(RM) $(NAME)
 	@echo "Everything is clean"
 
-re : fclean all
+re : fclean all 

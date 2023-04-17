@@ -6,12 +6,14 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:26:10 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/10/17 19:05:35 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:07:45 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Funcion para concatenar cadenas
+//Anade la string src al final de dst
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 {	

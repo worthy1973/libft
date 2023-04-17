@@ -6,17 +6,17 @@
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 18:08:33 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/11/04 15:55:44 by dlopez-i         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:45:55 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 //Itera la lista ’lst’ y aplica la función ’f’ al
 //contenido de cada nodo. Crea una lista resultante
 //de la aplicación correcta y sucesiva de la función
 //’f’ sobre cada nodo. La función ’del’ se utiliza
 //para eliminar el contenido de un nodo, si hace falta.
-
-#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
