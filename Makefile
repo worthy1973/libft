@@ -135,7 +135,7 @@ $(BONUS_OBJS_DIR)/%.o: %.c
 clean :
 	@$(RM) $(OBJS) $(OBJS_BONUS) $(DEPS) $(DEPS_BONUS) $(BONUS) $(OBJS_DIR) $(BONUS_OBJS_DIR)
 	@echo "$(YELLOW)$(ligth)Objects and Dependencies removed$(END)"
-fclean :
+fclean : clean
 	@$(RM) $(NAME)
 	@echo "Everything is clean"
 

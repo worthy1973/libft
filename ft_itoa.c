@@ -39,10 +39,10 @@ static long int	ft_len(int n)
 
 char	*ft_itoa(int n)
 {
-	char			*s;
-	long int		len;
+	char		*s;
+	long int	len;
 	unsigned int	num;
-	int				sign;
+	int		sign;
 
 	sign = 1;
 	len = ft_len(n);
